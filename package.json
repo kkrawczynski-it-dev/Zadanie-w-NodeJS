@@ -1,0 +1,22 @@
+{
+  "name": "zadanie-w-nodejs",
+  "version": "1.0.0",
+  "description": "Zadania Domowe:",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkrawczynski-it-dev/Zadanie-w-NodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkrawczynski-it-dev/Zadanie-w-NodeJS/issues"
+  },
+  "homepage": "https://github.com/kkrawczynski-it-dev/Zadanie-w-NodeJS#readme"
+}
