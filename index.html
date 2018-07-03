@@ -1,21 +1,28 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Zadanie z node.js</title>
     <meta charset="utf-8">
+    <title>Zadanie z node.js</title>
 </head>
-<!--
-<body onload="loadUser()">
-<div id="target">Loading...</div>
-<script id="template" type="x-tmpl-mustache">
-Hello {{ name }}!
-</script>
-
-
-</body>-->
 
 <body>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+    <script>
+    var data, template, html;
+    data = {
+        name: "some name",
+        sites: ["a","b","c"]
+    };
+        template ="<h1>{{name}}</h1>";
+        html = Mustache.to_html(template,data);
+        document.write(html);
+    </script>
 
 </body>
-</html>
+</html>>
+
+         
+
