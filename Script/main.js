@@ -12,7 +12,7 @@ $(document).ready(function(){
         template ="<h1>{{title}}</h1>";
 
         randomObj.forEach(title => {
-            html = Mustache.to_html(template,{title});
+            html = Mustache.to_html(template,title);
             $('#templateArea').append(html);
         });
 
