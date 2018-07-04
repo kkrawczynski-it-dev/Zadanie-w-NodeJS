@@ -1,27 +1,25 @@
-var data, template, html;
+var data, template, html, id;
 var url = "http://jsonplaceholder.typicode.com/posts";
 
-//temp
-var randomObj = {
-    name: "John"
-};
 
 $(document).ready(function(){
     $.getJSON(url, function(randomObj) {
-        // Mustache + template
+        
+        // Pierwsze zadanie
         template ="<h1>{{title}}</h1>";
-
         randomObj.forEach(title => {
             html = Mustache.to_html(template,title);
             $('#templateArea').append(html);
         });
 
-        
-        //html = Mustache.to_html(template,{title: "cos"});
-        
-        //html = Mustache.to_html(template,{randomObj});
-        //$('#templateArea').html(html);
-        //document.write(html);
+        // Tworzenie listy id
+        template2="<li>{{id}}</li>";
+        randomObj.forEach(id => {
+            id = Mustache.to_html(template2,id);
+            $('#userId').append(id);
+        });
+
+
     });
 });
 
