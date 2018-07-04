@@ -7,7 +7,7 @@ $(document).ready(function(){
         
         templateBig = `<div class="row">
         <div class="col-3">
-              <ul id="userId">Users list</ul>
+              <ul id="userId">UserId + title</ul>
         </div>
         <div class="col-9">
               <h1 id="templateArea">Test</h1>
@@ -25,11 +25,11 @@ $(document).ready(function(){
             $('#templateArea').append(html);
         });
 
-        // Tworzenie listy id
-        template2="<li>{{id}}</li>";
-        randomObj.forEach(id => {
-            id = Mustache.to_html(template2,id);
-            $('#userId').append(id);
+        // Tworzenie listy userId
+        template2="<li>{{userId}}</li>";
+        randomObj.forEach(userId => {
+            userId = Mustache.to_html(template2,userId);
+            $('#userId').append(userId);
         });
        
 
