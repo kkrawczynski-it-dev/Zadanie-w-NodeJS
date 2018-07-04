@@ -5,7 +5,7 @@ var url = "http://jsonplaceholder.typicode.com/posts";
 $(document).ready(function(){
     $.getJSON(url, function(randomObj) {
         
-        // Pierwsze zadanie
+        // Pobieranie wszystkich nagłówków
         template ="<h1>{{title}}</h1>";
         randomObj.forEach(title => {
             html = Mustache.to_html(template,title);
