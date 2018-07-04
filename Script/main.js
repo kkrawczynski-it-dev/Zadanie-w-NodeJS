@@ -24,10 +24,14 @@ $(document).ready(function(){
          template2="<li>{{userId}} {{title}}</li>";
 
          randomObj.forEach(el => {
-             html = Mustache.to_html(template,el);
-             userId = Mustache.to_html(template2,el);
-             $('#field2').append(html);
-             $('#field1').append(userId);
+
+          if(el.id > 50){
+                html = Mustache.to_html(template,el);
+                userId = Mustache.to_html(template2,el);
+                $('#field2').append(html);
+                $('#field1').append(userId);
+            }
+            
          });
  
     });
