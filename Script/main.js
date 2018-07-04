@@ -14,24 +14,22 @@ $(document).ready(function(){
         </div>
         </div>`;
 
+        
         allFields = Mustache.to_html(templateBig,"something");
             $('#myTemplate').append(allFields);
         
-        // field 2: json - body
-        template ="<li>{{body}}</li>";
-        randomObj.forEach(el => {
-            html = Mustache.to_html(template,el);
-            $('#field2').append(html);
-        });
+        
+         // joined fields
+         template ="<li>{{body}}</li>";
+         template2="<li>{{userId}} {{title}}</li>";
 
-        // field1: json - userId + title
-        template2="<li>{{userId}} {{title}}</li>";
-        randomObj.forEach(el => {
-            userId = Mustache.to_html(template2,el);
-            $('#field1').append(userId);
-        });
-       
-
+         randomObj.forEach(el => {
+             html = Mustache.to_html(template,el);
+             userId = Mustache.to_html(template2,el);
+             $('#field2').append(html);
+             $('#field1').append(userId);
+         });
+ 
     });
 });
 
