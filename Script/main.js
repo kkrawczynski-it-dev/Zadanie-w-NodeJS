@@ -7,29 +7,28 @@ $(document).ready(function(){
         
         templateBig = `<div class="row">
         <div class="col-3">
-              <ul id="userId">UserId + title</ul>
+              <ul id="field1">userId + title</ul>
         </div>
         <div class="col-9">
-              <h1 id="templateArea">Test</h1>
+              <ul id="field2">body</ul>
         </div>
         </div>`;
 
         allFields = Mustache.to_html(templateBig,"something");
             $('#myTemplate').append(allFields);
         
-    
-        // Pobieranie wszystkich nagłówków
-        template ="<h1>{{title}}</h1>";
-        randomObj.forEach(title => {
-            html = Mustache.to_html(template,title);
-            $('#templateArea').append(html);
+        // field 2: json - body
+        template ="<li>{{body}}</li>";
+        randomObj.forEach(el => {
+            html = Mustache.to_html(template,el);
+            $('#field2').append(html);
         });
 
-        // Tworzenie listy userId
-        template2="<li>{{userId}}</li>";
-        randomObj.forEach(userId => {
-            userId = Mustache.to_html(template2,userId);
-            $('#userId').append(userId);
+        // field1: json - userId + title
+        template2="<li>{{userId}} {{title}}</li>";
+        randomObj.forEach(el => {
+            userId = Mustache.to_html(template2,el);
+            $('#field1').append(userId);
         });
        
 
